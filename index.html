@@ -1,0 +1,2426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titan Fitness Gym | Elite Fitness Center in Kathmandu</title>
+    <meta name="description" content="Titan Fitness Gym - Kathmandu’s premier fitness destination. Personal training, group classes, CrossFit, yoga, and state-of-the-art equipment. Join now and transform your body.">
+    <meta name="keywords" content="gym Kathmandu, fitness center Nepal, personal trainer, CrossFit, yoga, weight loss, muscle building, Titan Fitness">
+    <meta name="author" content="Titan Fitness Gym">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://titanfitness.com.np/">
+    <meta property="og:title" content="Titan Fitness Gym | Elite Fitness Center in Kathmandu">
+    <meta property="og:description" content="Transform your body at Kathmandu’s premier fitness destination. World-class trainers, modern equipment, and proven results.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://titanfitness.com.np/">
+    <meta property="twitter:title" content="Titan Fitness Gym | Elite Fitness Center in Kathmandu">
+    <meta property="twitter:description" content="Transform your body at Kathmandu’s premier fitness destination. World-class trainers, modern equipment, and proven results.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💪</text></svg>">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'titan-black': '#0a0a0a',
+                        'titan-dark': '#111111',
+                        'titan-gray': '#1a1a1a',
+                        'titan-light-gray': '#2a2a2a',
+                        'titan-red': '#E50914',
+                        'titan-red-hover': '#b20710',
+                        'titan-white': '#ffffff',
+                        'titan-muted': '#888888',
+                    },
+                    fontFamily: {
+                        'bebas': ['Bebas Neue', 'sans-serif'],
+                        'inter': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111111;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #E50914;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #b20710;
+        }
+
+        /* Hero Video Background */
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.6) 50%, rgba(229,9,20,0.15) 100%);
+            z-index: -1;
+        }
+
+        /* Text Gradient */
+        .text-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #E50914 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Button Hover Effects */
+        .btn-primary {
+            background: linear-gradient(135deg, #E50914 0%, #b20710 100%);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(229,9,20,0.4);
+        }
+
+        .btn-outline {
+            border: 2px solid #ffffff;
+            transition: all 0.3s ease;
+        }
+        .btn-outline:hover {
+            background: #ffffff;
+            color: #0a0a0a;
+            transform: translateY(-2px);
+        }
+
+        /* Card Hover Effects */
+        .card-hover {
+            transition: all 0.4s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(229,9,20,0.15);
+        }
+
+        /* Image Hover Zoom */
+        .img-zoom {
+            overflow: hidden;
+        }
+        .img-zoom img {
+            transition: transform 0.5s ease;
+        }
+        .img-zoom:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Navigation */
+        .nav-scrolled {
+            background: rgba(10, 10, 10, 0.95) !important;
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        /* Pricing Card Featured */
+        .pricing-featured {
+            border: 2px solid #E50914;
+            position: relative;
+            transform: scale(1.05);
+        }
+        .pricing-featured::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #E50914;
+            color: white;
+            padding: 4px 16px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        /* Schedule Table */
+        .schedule-cell {
+            transition: all 0.3s ease;
+        }
+        .schedule-cell:hover {
+            background: rgba(229,9,20,0.2);
+            transform: scale(1.05);
+        }
+
+        /* Before/After Slider */
+        .comparison-slider {
+            position: relative;
+            overflow: hidden;
+        }
+        .comparison-slider .before-label,
+        .comparison-slider .after-label {
+            position: absolute;
+            bottom: 20px;
+            padding: 8px 16px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.875rem;
+        }
+        .comparison-slider .before-label {
+            left: 20px;
+            border-left: 3px solid #E50914;
+        }
+        .comparison-slider .after-label {
+            right: 20px;
+            border-right: 3px solid #22c55e;
+        }
+
+        /* Testimonial Carousel */
+        .testimonial-slide {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        .testimonial-slide.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* FAQ Accordion */
+        .faq-item {
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .faq-question {
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .faq-question:hover {
+            color: #E50914;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+        .faq-answer.open {
+            max-height: 500px;
+            padding-bottom: 1.5rem;
+        }
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+        .faq-icon.rotate {
+            transform: rotate(180deg);
+        }
+
+        /* Chat Widget */
+        .chat-widget {
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            width: 380px;
+            max-height: 600px;
+            background: #1a1a1a;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            overflow: hidden;
+            display: none;
+            flex-direction: column;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            z-index: 1000;
+        }
+        .chat-widget.active {
+            display: flex;
+        }
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 16px;
+        }
+        .chat-message {
+            margin-bottom: 12px;
+            max-width: 85%;
+            padding: 12px 16px;
+            border-radius: 12px;
+            font-size: 0.875rem;
+            line-height: 1.5;
+            animation: messageSlide 0.3s ease;
+        }
+        @keyframes messageSlide {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .chat-message.bot {
+            background: #2a2a2a;
+            color: #ffffff;
+            align-self: flex-start;
+            border-bottom-left-radius: 4px;
+        }
+        .chat-message.user {
+            background: #E50914;
+            color: #ffffff;
+            align-self: flex-end;
+            margin-left: auto;
+            border-bottom-right-radius: 4px;
+        }
+        .typing-indicator {
+            display: flex;
+            gap: 4px;
+            padding: 12px 16px;
+            background: #2a2a2a;
+            border-radius: 12px;
+            width: fit-content;
+            margin-bottom: 12px;
+        }
+        .typing-dot {
+            width: 8px;
+            height: 8px;
+            background: #888;
+            border-radius: 50%;
+            animation: typingBounce 1.4s infinite ease-in-out both;
+        }
+        .typing-dot:nth-child(1) { animation-delay: -0.32s; }
+        .typing-dot:nth-child(2) { animation-delay: -0.16s; }
+        @keyframes typingBounce {
+            0%, 80%, 100% { transform: scale(0.6); }
+            40% { transform: scale(1); }
+        }
+        .quick-reply {
+            display: inline-block;
+            padding: 6px 14px;
+            margin: 4px 4px 0 0;
+            background: rgba(229,9,20,0.15);
+            border: 1px solid rgba(229,9,20,0.3);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: #ffffff;
+        }
+        .quick-reply:hover {
+            background: #E50914;
+            border-color: #E50914;
+        }
+
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 28px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+            70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        /* BMI Calculator */
+        .bmi-result {
+            transition: all 0.3s ease;
+        }
+
+        /* Counter Animation */
+        .counter {
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* Parallax Effect */
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        @media (max-width: 768px) {
+            .parallax {
+                background-attachment: scroll;
+            }
+            .pricing-featured {
+                transform: scale(1);
+            }
+            .chat-widget {
+                width: calc(100vw - 40px);
+                right: 20px;
+                left: 20px;
+            }
+        }
+
+        /* Loading Animation */
+        .loader {
+            border: 3px solid rgba(255,255,255,0.1);
+            border-top: 3px solid #E50914;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Section Divider */
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(229,9,20,0.5), transparent);
+            margin: 0 auto;
+        }
+
+        /* Star Rating */
+        .star-rating {
+            color: #fbbf24;
+        }
+
+        /* Map Container */
+        .map-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Program Card Overlay */
+        .program-overlay {
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 50%, transparent 100%);
+        }
+
+        /* Trainer Social Icons */
+        .trainer-social {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+        }
+        .trainer-card:hover .trainer-social {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Smooth Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-titan-red rounded-lg flex items-center justify-center">
+                        <i class="fas fa-dumbbell text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="font-bebas text-2xl tracking-wider text-white">TITAN FITNESS</span>
+                        <span class="block text-[0.6rem] text-titan-muted tracking-[0.3em] -mt-1">GYM & FITNESS</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="#about" class="text-sm font-medium text-gray-300 hover:text-titan-red transition-colors">About</a>
+                    <a href="#membership" class="text-sm font-medium text-gray-300 hover:text-titan-red transition-colors">Membership</a>
+                    <a href="#trainers" class="text-sm font-medium text-gray-300 hover:text-titan-red transition-colors">Trainers</a>
+                    <a href="#programs" class="text-sm font-medium text-gray-300 hover:text-titan-red transition-colors">Programs</a>
+                    <a href="#schedule" class="text-sm font-medium text-gray-300 hover:text-titan-red transition-colors">Schedule</a>
+                    <a href="#contact" class="text-sm font-medium text-gray-300 hover:text-titan-red transition-colors">Contact</a>
+                    <a href="#trial" class="btn-primary px-6 py-2.5 rounded-full text-sm font-bold text-white">FREE TRIAL</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-80 h-full bg-titan-dark z-50 p-8 lg:hidden">
+            <button id="close-menu" class="absolute top-6 right-6 text-white text-2xl">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="flex flex-col gap-6 mt-16">
+                <a href="#about" class="text-lg font-medium text-gray-300 hover:text-titan-red transition-colors">About</a>
+                <a href="#membership" class="text-lg font-medium text-gray-300 hover:text-titan-red transition-colors">Membership</a>
+                <a href="#trainers" class="text-lg font-medium text-gray-300 hover:text-titan-red transition-colors">Trainers</a>
+                <a href="#programs" class="text-lg font-medium text-gray-300 hover:text-titan-red transition-colors">Programs</a>
+                <a href="#schedule" class="text-lg font-medium text-gray-300 hover:text-titan-red transition-colors">Schedule</a>
+                <a href="#contact" class="text-lg font-medium text-gray-300 hover:text-titan-red transition-colors">Contact</a>
+                <a href="#trial" class="btn-primary px-6 py-3 rounded-full text-center font-bold text-white mt-4">FREE TRIAL</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&q=80" alt="Gym Background" class="hero-bg">
+        <div class="hero-overlay"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div data-aos="fade-down" data-aos-duration="1000">
+                <span class="inline-block px-4 py-1.5 bg-titan-red/20 border border-titan-red/30 rounded-full text-titan-red text-sm font-semibold tracking-wider mb-6">
+                    KATHMANDU'S #1 FITNESS DESTINATION
+                </span>
+            </div>
+
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="font-bebas text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-white tracking-wider leading-none mb-6">
+                FORGE YOUR<br><span class="text-titan-red">LEGACY</span>
+            </h1>
+
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Elite training facilities. World-class coaches. Unstoppable results.<br class="hidden sm:block">
+                Join Kathmandu’s most exclusive fitness community and transform your body.
+            </p>
+
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600" class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+                <a href="#membership" class="btn-primary px-10 py-4 rounded-full text-lg font-bold text-white tracking-wide">
+                    JOIN NOW <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+                <a href="#trial" class="btn-outline px-10 py-4 rounded-full text-lg font-bold text-white tracking-wide">
+                    BOOK FREE TRIAL
+                </a>
+            </div>
+
+            <!-- Stats -->
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800" class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+                    <div class="text-3xl sm:text-4xl font-bold text-titan-red counter" data-target="5000">0</div>
+                    <div class="text-sm text-gray-400 mt-1">Active Members</div>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+                    <div class="text-3xl sm:text-4xl font-bold text-titan-red counter" data-target="50">0</div>
+                    <div class="text-sm text-gray-400 mt-1">Expert Trainers</div>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+                    <div class="text-3xl sm:text-4xl font-bold text-titan-red counter" data-target="15">0</div>
+                    <div class="text-sm text-gray-400 mt-1">Years Experience</div>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+                    <div class="text-3xl sm:text-4xl font-bold text-titan-red counter" data-target="98">0</div>
+                    <div class="text-sm text-gray-400 mt-1">% Success Rate</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-white/50 text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-titan-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right" class="relative">
+                    <div class="relative rounded-3xl overflow-hidden img-zoom">
+                        <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&q=80" alt="Gym Interior" class="w-full h-[500px] object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-titan-black/80 to-transparent"></div>
+                    </div>
+                    <div class="absolute -bottom-8 -right-8 bg-titan-red p-8 rounded-2xl hidden md:block">
+                        <div class="text-4xl font-bold text-white">15+</div>
+                        <div class="text-sm text-white/80">Years of<br>Excellence</div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left">
+                    <span class="text-titan-red font-semibold tracking-wider text-sm uppercase">About Us</span>
+                    <h2 class="font-bebas text-5xl sm:text-6xl text-white mt-2 mb-6 tracking-wide">WE ARE TITAN FITNESS</h2>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Founded in 2009, Titan Fitness Gym has established itself as the premier destination for serious fitness enthusiasts in Kathmandu. What started as a small training facility has evolved into a comprehensive fitness empire, serving over 5,000 members with world-class equipment and unparalleled coaching.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed mb-8">
+                        Our mission is simple: to transform lives through fitness, community, and unwavering support. We believe that everyone has the potential to achieve greatness, and our role is to provide the environment, tools, and guidance to make that happen.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-titan-red/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-bullseye text-titan-red text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white mb-1">Our Mission</h4>
+                                <p class="text-sm text-gray-400">Empower every individual to achieve their peak physical potential.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-titan-red/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-eye text-titan-red text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white mb-1">Our Vision</h4>
+                                <p class="text-sm text-gray-400">To be Nepal's most trusted fitness brand by 2030.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center gap-2 text-gray-300">
+                            <i class="fas fa-check-circle text-titan-red"></i>
+                            <span class="text-sm">Certified Trainers</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-300">
+                            <i class="fas fa-check-circle text-titan-red"></i>
+                            <span class="text-sm">Modern Equipment</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-300">
+                            <i class="fas fa-check-circle text-titan-red"></i>
+                            <span class="text-sm">Community Focus</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-4xl"></div>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="py-24 bg-titan-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-titan-red font-semibold tracking-wider text-sm uppercase">Why Choose Us</span>
+                <h2 class="font-bebas text-5xl sm:text-6xl text-white mt-2 tracking-wide">THE TITAN ADVANTAGE</h2>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">We don't just provide equipment—we deliver a complete fitness ecosystem designed for your success.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div data-aos="fade-up" data-aos-delay="0" class="bg-titan-gray border border-white/5 rounded-2xl p-8 card-hover group">
+                    <div class="w-14 h-14 bg-titan-red/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-titan-red transition-colors">
+                        <i class="fas fa-certificate text-titan-red text-2xl group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Certified Trainers</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">All trainers hold internationally recognized certifications and undergo continuous education.</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="100" class="bg-titan-gray border border-white/5 rounded-2xl p-8 card-hover group">
+                    <div class="w-14 h-14 bg-titan-red/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-titan-red transition-colors">
+                        <i class="fas fa-dumbbell text-titan-red text-2xl group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Modern Equipment</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">State-of-the-art machines from Technogym, Life Fitness, and Hammer Strength.</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200" class="bg-titan-gray border border-white/5 rounded-2xl p-8 card-hover group">
+                    <div class="w-14 h-14 bg-titan-red/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-titan-red transition-colors">
+                        <i class="fas fa-calendar-alt text-titan-red text-2xl group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Flexible Memberships</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Monthly, quarterly, and annual plans designed to fit your lifestyle and budget.</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="300" class="bg-titan-gray border border-white/5 rounded-2xl p-8 card-hover group">
+                    <div class="w-14 h-14 bg-titan-red/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-titan-red transition-colors">
+                        <i class="fas fa-apple-alt text-titan-red text-2xl group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Nutrition Guidance</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Personalized meal plans and nutrition counseling from certified dietitians.</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="0" class="bg-titan-gray border border-white/5 rounded-2xl p-8 card-hover group">
+                    <div class="w-14 h-14 bg-titan-red/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-titan-red transition-colors">
+                        <i class="fas fa-user-friends text-titan-red text-2xl group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Personal Training</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">One-on-one sessions tailored to your specific goals and fitness level.</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="100" class="bg-titan-gray border border-white/5 rounded-2xl p-8 card-hover group">
+                    <div class="w-14 h-14 bg-titan-red/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-titan-red transition-colors">
+                        <i class="fas fa-users text-titan-red text-2xl group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Group Classes</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">High-energy group sessions including Zumba, Yoga, HIIT, and CrossFit.</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200" class="bg-titan-gray border border-white/5 rounded-2xl p-8 card-hover group">
+                    <div class="w-14 h-14 bg-titan-red/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-titan-red transition-colors">
+                        <i class="fas fa-sparkles text-titan-red text-2xl group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Clean Facilities</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Hospital-grade sanitation protocols with 3x daily deep cleaning.</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="300" class="bg-titan-gray border border-white/5 rounded-2xl p-8 card-hover group">
+                    <div class="w-14 h-14 bg-titan-red/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-titan-red transition-colors">
+                        <i class="fas fa-heart text-titan-red text-2xl group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Supportive Community</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Join a family of like-minded individuals who push each other to succeed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-4xl"></div>
+
+    <!-- Membership Plans -->
+    <section id="membership" class="py-24 bg-titan-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-titan-red font-semibold tracking-wider text-sm uppercase">Membership</span>
+                <h2 class="font-bebas text-5xl sm:text-6xl text-white mt-2 tracking-wide">CHOOSE YOUR PLAN</h2>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Flexible pricing options designed to fit your commitment level and fitness goals.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 items-start">
+                <!-- Monthly -->
+                <div data-aos="fade-up" data-aos-delay="0" class="bg-titan-gray border border-white/5 rounded-2xl p-6 card-hover">
+                    <div class="text-sm text-gray-400 mb-2">Monthly</div>
+                    <div class="text-4xl font-bold text-white mb-1">Rs. 3,500</div>
+                    <div class="text-xs text-gray-500 mb-6">per month</div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3 text-sm text-gray-300">
+                            <i class="fas fa-check text-titan-red text-xs"></i> Gym Access
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300">
+                            <i class="fas fa-check text-titan-red text-xs"></i> Locker Room
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300">
+                            <i class="fas fa-check text-titan-red text-xs"></i> Basic Equipment
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-500">
+                            <i class="fas fa-times text-gray-600 text-xs"></i> Group Classes
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-500">
+                            <i class="fas fa-times text-gray-600 text-xs"></i> Personal Training
+                        </li>
+                    </ul>
+                    <button onclick="openTrial()" class="w-full py-3 border border-white/20 rounded-xl text-sm font-semibold text-white hover:bg-white hover:text-titan-black transition-all">Get Started</button>
+                </div>
+
+                <!-- Quarterly -->
+                <div data-aos="fade-up" data-aos-delay="100" class="bg-titan-gray border border-white/5 rounded-2xl p-6 card-hover">
+                    <div class="text-sm text-gray-400 mb-2">Quarterly</div>
+                    <div class="text-4xl font-bold text-white mb-1">Rs. 9,000</div>
+                    <div class="text-xs text-gray-500 mb-6">per 3 months</div>
+                    <div class="inline-block px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full mb-4">Save Rs. 1,500</div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3 text-sm text-gray-300">
+                            <i class="fas fa-check text-titan-red text-xs"></i> Full Gym Access
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300">
+                            <i class="fas fa-check text-titan-red text-xs"></i> All Group Classes
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300">
+                            <i class="fas fa-check text-titan-red text-xs"></i> Locker & Shower
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300">
+                            <i class="fas fa-check text-titan-red text-xs"></i> Nutrition Guide
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-500">
+                            <i class="fas fa-times text-gray-600 text-xs"></i> Personal Training
+                        </li>
+                    </ul>
+                    <button onclick="openTrial()" class="w-full py-3 border border-white/20 rounded-xl text-sm font-semibold text-white hover:bg-white hover:text-titan-black transition-all">Get Started</button>
+                </div>
+
+                <!-- Annual (Featured) -->
+                <div data-aos="fade-up" data-aos-delay="200" class="bg-titan-gray border border-titan-red rounded-2xl p-6 card-hover pricing-featured">
+                    <div class="text-sm text-titan-red font-semibold mb-2">Annual</div>
+                    <div class="text-4xl font-bold text-white mb-1">Rs. 30,000</div>
+                    <div class="text-xs text-gray-500 mb-6">per year</div>
+                    <div class="inline-block px-3 py-1 bg-titan-red/20 text-titan-red text-xs rounded-full mb-4">Save Rs. 12,000</div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3 text-sm text-gray-300">
+                            <i class="fas fa-check text-titan-red text-xs"></i> Unlimited Access
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300">
+                            <i class="fas fa-check text-titan-red text-xs"></i> All Classes
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300">
+                            <i class="fas fa-check text-titan-red text-xs"></i> 2 PT Sessions
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300">
+                            <i class="fas fa-check text-titan-red text-xs"></i> Nutrition Plan
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300">
+                            <i class="fas fa-check text-titan-red text-xs"></i> Guest Passes
+                        </li>
+                    </ul>
+                    <button onclick="openTrial()" class="btn-primary w-full py-3 rounded-xl text-sm font-semibold text-white">Get Started</button>
+                </div>
+
+                <!-- Personal Training -->
+                <div data-aos="fade-up" data-aos-delay="300" class="bg-titan-gray border border-white/5 rounded-2xl p-6 card-hover">
+                    <div class="text-sm text-gray-400 mb-2">Personal Training</div>
+                    <div class="text-4xl font-bold text-white mb-1">Rs. 15,000</div>
+                    <div class="text-xs text-gray-500 mb-6">per month</div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3 text-sm text-gray-300">
+                            <i class="fas fa-check text-titan-red text-xs"></i> 12 PT Sessions
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300">
+                            <i class="fas fa-check text-titan-red text-xs"></i> Custom Workout Plan
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300">
+                            <i class="fas fa-check text-titan-red text-xs"></i> Nutrition Plan
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300">
+                            <i class="fas fa-check text-titan-red text-xs"></i> Progress Tracking
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300">
+                            <i class="fas fa-check text-titan-red text-xs"></i> Full Gym Access
+                        </li>
+                    </ul>
+                    <button onclick="openTrial()" class="w-full py-3 border border-white/20 rounded-xl text-sm font-semibold text-white hover:bg-white hover:text-titan-black transition-all">Get Started</button>
+                </div>
+
+                <!-- VIP -->
+                <div data-aos="fade-up" data-aos-delay="400" class="bg-titan-gray border border-white/5 rounded-2xl p-6 card-hover">
+                    <div class="text-sm text-gray-400 mb-2">Premium VIP</div>
+                    <div class="text-4xl font-bold text-white mb-1">Rs. 50,000</div>
+                    <div class="text-xs text-gray-500 mb-6">per year</div>
+                    <div class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs rounded-full mb-4">All Inclusive</div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3 text-sm text-gray-300">
+                            <i class="fas fa-check text-titan-red text-xs"></i> Everything in Annual
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300">
+                            <i class="fas fa-check text-titan-red text-xs"></i> 24 PT Sessions
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300">
+                            <i class="fas fa-check text-titan-red text-xs"></i> VIP Locker Room
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300">
+                            <i class="fas fa-check text-titan-red text-xs"></i> Spa & Recovery
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300">
+                            <i class="fas fa-check text-titan-red text-xs"></i> Priority Booking
+                        </li>
+                    </ul>
+                    <button onclick="openTrial()" class="w-full py-3 border border-white/20 rounded-xl text-sm font-semibold text-white hover:bg-white hover:text-titan-black transition-all">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-4xl"></div>
+
+    <!-- Trainers Section -->
+    <section id="trainers" class="py-24 bg-titan-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-titan-red font-semibold tracking-wider text-sm uppercase">Our Team</span>
+                <h2 class="font-bebas text-5xl sm:text-6xl text-white mt-2 tracking-wide">MEET OUR TRAINERS</h2>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">World-class coaches dedicated to pushing you beyond your limits.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Trainer 1 -->
+                <div data-aos="fade-up" data-aos-delay="0" class="trainer-card bg-titan-gray rounded-2xl overflow-hidden card-hover group">
+                    <div class="relative img-zoom">
+                        <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=600&q=80" alt="Rajesh Hamal" class="w-full h-80 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-titan-black via-transparent to-transparent"></div>
+                        <div class="trainer-social absolute bottom-4 left-4 right-4 flex justify-center gap-3">
+                            <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-titan-red transition-colors"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-titan-red transition-colors"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-titan-red transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white">Rajesh Hamal</h3>
+                        <p class="text-titan-red text-sm font-medium mb-2">Head Coach & Founder</p>
+                        <p class="text-gray-400 text-sm mb-3">10+ Years Experience | NSCA-CPT Certified</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300">Strength</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300">Conditioning</span>
+                        </div>
+                        <button onclick="contactTrainer('Rajesh Hamal')" class="w-full py-2.5 bg-titan-red/20 text-titan-red rounded-xl text-sm font-semibold hover:bg-titan-red hover:text-white transition-all">Contact Trainer</button>
+                    </div>
+                </div>
+
+                <!-- Trainer 2 -->
+                <div data-aos="fade-up" data-aos-delay="100" class="trainer-card bg-titan-gray rounded-2xl overflow-hidden card-hover group">
+                    <div class="relative img-zoom">
+                        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&q=80" alt="Sunita Gurung" class="w-full h-80 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-titan-black via-transparent to-transparent"></div>
+                        <div class="trainer-social absolute bottom-4 left-4 right-4 flex justify-center gap-3">
+                            <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-titan-red transition-colors"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-titan-red transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white">Sunita Gurung</h3>
+                        <p class="text-titan-red text-sm font-medium mb-2">Yoga & Mindfulness Specialist</p>
+                        <p class="text-gray-400 text-sm mb-3">8 Years Experience | RYT-500 Certified</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300">Yoga</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300">Flexibility</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300">Meditation</span>
+                        </div>
+                        <button onclick="contactTrainer('Sunita Gurung')" class="w-full py-2.5 bg-titan-red/20 text-titan-red rounded-xl text-sm font-semibold hover:bg-titan-red hover:text-white transition-all">Contact Trainer</button>
+                    </div>
+                </div>
+
+                <!-- Trainer 3 -->
+                <div data-aos="fade-up" data-aos-delay="200" class="trainer-card bg-titan-gray rounded-2xl overflow-hidden card-hover group">
+                    <div class="relative img-zoom">
+                        <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&q=80" alt="Mike Johnson" class="w-full h-80 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-titan-black via-transparent to-transparent"></div>
+                        <div class="trainer-social absolute bottom-4 left-4 right-4 flex justify-center gap-3">
+                            <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-titan-red transition-colors"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-titan-red transition-colors"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white">Mike Johnson</h3>
+                        <p class="text-titan-red text-sm font-medium mb-2">CrossFit & HIIT Coach</p>
+                        <p class="text-gray-400 text-sm mb-3">12 Years Experience | CF-L3 Certified</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300">CrossFit</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300">HIIT</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300">Functional</span>
+                        </div>
+                        <button onclick="contactTrainer('Mike Johnson')" class="w-full py-2.5 bg-titan-red/20 text-titan-red rounded-xl text-sm font-semibold hover:bg-titan-red hover:text-white transition-all">Contact Trainer</button>
+                    </div>
+                </div>
+
+                <!-- Trainer 4 -->
+                <div data-aos="fade-up" data-aos-delay="0" class="trainer-card bg-titan-gray rounded-2xl overflow-hidden card-hover group">
+                    <div class="relative img-zoom">
+                        <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=600&q=80" alt="Priya Sharma" class="w-full h-80 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-titan-black via-transparent to-transparent"></div>
+                        <div class="trainer-social absolute bottom-4 left-4 right-4 flex justify-center gap-3">
+                            <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-titan-red transition-colors"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-titan-red transition-colors"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white">Priya Sharma</h3>
+                        <p class="text-titan-red text-sm font-medium mb-2">Nutritionist & PT Specialist</p>
+                        <p class="text-gray-400 text-sm mb-3">6 Years Experience | ISSA Certified</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300">Weight Loss</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300">Nutrition</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300">Transformation</span>
+                        </div>
+                        <button onclick="contactTrainer('Priya Sharma')" class="w-full py-2.5 bg-titan-red/20 text-titan-red rounded-xl text-sm font-semibold hover:bg-titan-red hover:text-white transition-all">Contact Trainer</button>
+                    </div>
+                </div>
+
+                <!-- Trainer 5 -->
+                <div data-aos="fade-up" data-aos-delay="100" class="trainer-card bg-titan-gray rounded-2xl overflow-hidden card-hover group">
+                    <div class="relative img-zoom">
+                        <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80" alt="David Chen" class="w-full h-80 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-titan-black via-transparent to-transparent"></div>
+                        <div class="trainer-social absolute bottom-4 left-4 right-4 flex justify-center gap-3">
+                            <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-titan-red transition-colors"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-titan-red transition-colors"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white">David Chen</h3>
+                        <p class="text-titan-red text-sm font-medium mb-2">Bodybuilding Coach</p>
+                        <p class="text-gray-400 text-sm mb-3">15 Years Experience | IFBB Pro</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300">Bodybuilding</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300">Muscle Gain</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300">Contest Prep</span>
+                        </div>
+                        <button onclick="contactTrainer('David Chen')" class="w-full py-2.5 bg-titan-red/20 text-titan-red rounded-xl text-sm font-semibold hover:bg-titan-red hover:text-white transition-all">Contact Trainer</button>
+                    </div>
+                </div>
+
+                <!-- Trainer 6 -->
+                <div data-aos="fade-up" data-aos-delay="200" class="trainer-card bg-titan-gray rounded-2xl overflow-hidden card-hover group">
+                    <div class="relative img-zoom">
+                        <img src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=600&q=80" alt="Anjali Thapa" class="w-full h-80 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-titan-black via-transparent to-transparent"></div>
+                        <div class="trainer-social absolute bottom-4 left-4 right-4 flex justify-center gap-3">
+                            <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-titan-red transition-colors"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-titan-red transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white">Anjali Thapa</h3>
+                        <p class="text-titan-red text-sm font-medium mb-2">Zumba & Dance Fitness</p>
+                        <p class="text-gray-400 text-sm mb-3">5 Years Experience | ACE Certified</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300">Zumba</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300">Cardio Dance</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300">Women's Fitness</span>
+                        </div>
+                        <button onclick="contactTrainer('Anjali Thapa')" class="w-full py-2.5 bg-titan-red/20 text-titan-red rounded-xl text-sm font-semibold hover:bg-titan-red hover:text-white transition-all">Contact Trainer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-4xl"></div>
+
+    <!-- Fitness Programs -->
+    <section id="programs" class="py-24 bg-titan-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-titan-red font-semibold tracking-wider text-sm uppercase">Programs</span>
+                <h2 class="font-bebas text-5xl sm:text-6xl text-white mt-2 tracking-wide">TRANSFORMATION PROGRAMS</h2>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Specialized programs designed for every fitness goal and experience level.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div data-aos="fade-up" data-aos-delay="0" class="relative rounded-2xl overflow-hidden group h-80 img-zoom cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9a50e?w=600&q=80" alt="Weight Loss" class="w-full h-full object-cover">
+                    <div class="program-overlay absolute inset-0 flex flex-col justify-end p-6">
+                        <span class="text-titan-red text-xs font-bold tracking-wider mb-1">PROGRAM</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Weight Loss</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity">Scientifically designed cardio and nutrition protocols to burn fat effectively.</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="100" class="relative rounded-2xl overflow-hidden group h-80 img-zoom cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&q=80" alt="Muscle Building" class="w-full h-full object-cover">
+                    <div class="program-overlay absolute inset-0 flex flex-col justify-end p-6">
+                        <span class="text-titan-red text-xs font-bold tracking-wider mb-1">PROGRAM</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Muscle Building</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity">Hypertrophy-focused training with progressive overload techniques.</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200" class="relative rounded-2xl overflow-hidden group h-80 img-zoom cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80" alt="Strength Training" class="w-full h-full object-cover">
+                    <div class="program-overlay absolute inset-0 flex flex-col justify-end p-6">
+                        <span class="text-titan-red text-xs font-bold tracking-wider mb-1">PROGRAM</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Strength Training</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity">Powerlifting and Olympic lifting programs for maximum strength gains.</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="300" class="relative rounded-2xl overflow-hidden group h-80 img-zoom cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&q=80" alt="Cardio Training" class="w-full h-full object-cover">
+                    <div class="program-overlay absolute inset-0 flex flex-col justify-end p-6">
+                        <span class="text-titan-red text-xs font-bold tracking-wider mb-1">PROGRAM</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Cardio Training</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity">Heart-pumping sessions to improve endurance and cardiovascular health.</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="0" class="relative rounded-2xl overflow-hidden group h-80 img-zoom cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1517963879433-6ad2b056d712?w=600&q=80" alt="CrossFit" class="w-full h-full object-cover">
+                    <div class="program-overlay absolute inset-0 flex flex-col justify-end p-6">
+                        <span class="text-titan-red text-xs font-bold tracking-wider mb-1">PROGRAM</span>
+                        <h3 class="text-xl font-bold text-white mb-2">CrossFit</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity">High-intensity functional movements for total body conditioning.</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="100" class="relative rounded-2xl overflow-hidden group h-80 img-zoom cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&q=80" alt="Body Transformation" class="w-full h-full object-cover">
+                    <div class="program-overlay absolute inset-0 flex flex-col justify-end p-6">
+                        <span class="text-titan-red text-xs font-bold tracking-wider mb-1">PROGRAM</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Body Transformation</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity">Complete 12-week physique overhaul with diet and training.</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200" class="relative rounded-2xl overflow-hidden group h-80 img-zoom cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&q=80" alt="Women's Fitness" class="w-full h-full object-cover">
+                    <div class="program-overlay absolute inset-0 flex flex-col justify-end p-6">
+                        <span class="text-titan-red text-xs font-bold tracking-wider mb-1">PROGRAM</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Women's Fitness</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity">Tailored programs focusing on toning, strength, and confidence.</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="300" class="relative rounded-2xl overflow-hidden group h-80 img-zoom cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80" alt="Senior Fitness" class="w-full h-full object-cover">
+                    <div class="program-overlay absolute inset-0 flex flex-col justify-end p-6">
+                        <span class="text-titan-red text-xs font-bold tracking-wider mb-1">PROGRAM</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Senior Fitness</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity">Low-impact exercises to maintain mobility, balance, and health.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-4xl"></div>
+
+    <!-- Class Schedule -->
+    <section id="schedule" class="py-24 bg-titan-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-titan-red font-semibold tracking-wider text-sm uppercase">Timetable</span>
+                <h2 class="font-bebas text-5xl sm:text-6xl text-white mt-2 tracking-wide">CLASS SCHEDULE</h2>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Find the perfect class time that fits your busy lifestyle.</p>
+            </div>
+
+            <div data-aos="fade-up" class="overflow-x-auto">
+                <table class="w-full min-w-[800px] border-collapse">
+                    <thead>
+                        <tr class="border-b border-white/10">
+                            <th class="py-4 px-6 text-left text-gray-400 font-medium text-sm">Time</th>
+                            <th class="py-4 px-6 text-center text-gray-400 font-medium text-sm">Mon</th>
+                            <th class="py-4 px-6 text-center text-gray-400 font-medium text-sm">Tue</th>
+                            <th class="py-4 px-6 text-center text-gray-400 font-medium text-sm">Wed</th>
+                            <th class="py-4 px-6 text-center text-gray-400 font-medium text-sm">Thu</th>
+                            <th class="py-4 px-6 text-center text-gray-400 font-medium text-sm">Fri</th>
+                            <th class="py-4 px-6 text-center text-gray-400 font-medium text-sm">Sat</th>
+                            <th class="py-4 px-6 text-center text-gray-400 font-medium text-sm">Sun</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm">
+                        <tr class="border-b border-white/5">
+                            <td class="py-4 px-6 text-white font-medium">06:00 AM</td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-titan-red/20 text-titan-red rounded-lg py-2 px-3 text-center text-xs font-semibold">HIIT</div></td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-purple-500/20 text-purple-400 rounded-lg py-2 px-3 text-center text-xs font-semibold">Yoga</div></td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-titan-red/20 text-titan-red rounded-lg py-2 px-3 text-center text-xs font-semibold">HIIT</div></td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-purple-500/20 text-purple-400 rounded-lg py-2 px-3 text-center text-xs font-semibold">Yoga</div></td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-titan-red/20 text-titan-red rounded-lg py-2 px-3 text-center text-xs font-semibold">HIIT</div></td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-blue-500/20 text-blue-400 rounded-lg py-2 px-3 text-center text-xs font-semibold">CrossFit</div></td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-green-500/20 text-green-400 rounded-lg py-2 px-3 text-center text-xs font-semibold">Functional</div></td>
+                        </tr>
+                        <tr class="border-b border-white/5">
+                            <td class="py-4 px-6 text-white font-medium">07:00 AM</td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-purple-500/20 text-purple-400 rounded-lg py-2 px-3 text-center text-xs font-semibold">Yoga</div></td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-blue-500/20 text-blue-400 rounded-lg py-2 px-3 text-center text-xs font-semibold">CrossFit</div></td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-purple-500/20 text-purple-400 rounded-lg py-2 px-3 text-center text-xs font-semibold">Yoga</div></td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-blue-500/20 text-blue-400 rounded-lg py-2 px-3 text-center text-xs font-semibold">CrossFit</div></td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-purple-500/20 text-purple-400 rounded-lg py-2 px-3 text-center text-xs font-semibold">Yoga</div></td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-titan-red/20 text-titan-red rounded-lg py-2 px-3 text-center text-xs font-semibold">Strength</div></td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-green-500/20 text-green-400 rounded-lg py-2 px-3 text-center text-xs font-semibold">Functional</div></td>
+                        </tr>
+                        <tr class="border-b border-white/5">
+                            <td class="py-4 px-6 text-white font-medium">09:00 AM</td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-orange-500/20 text-orange-400 rounded-lg py-2 px-3 text-center text-xs font-semibold">Zumba</div></td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-titan-red/20 text-titan-red rounded-lg py-2 px-3 text-center text-xs font-semibold">Strength</div></td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-orange-500/20 text-orange-400 rounded-lg py-2 px-3 text-center text-xs font-semibold">Zumba</div></td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-titan-red/20 text-titan-red rounded-lg py-2 px-3 text-center text-xs font-semibold">Strength</div></td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-orange-500/20 text-orange-400 rounded-lg py-2 px-3 text-center text-xs font-semibold">Zumba</div></td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-blue-500/20 text-blue-400 rounded-lg py-2 px-3 text-center text-xs font-semibold">CrossFit</div></td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-purple-500/20 text-purple-400 rounded-lg py-2 px-3 text-center text-xs font-semibold">Yoga</div></td>
+                        </tr>
+                        <tr class="border-b border-white/5">
+                            <td class="py-4 px-6 text-white font-medium">05:00 PM</td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-titan-red/20 text-titan-red rounded-lg py-2 px-3 text-center text-xs font-semibold">Strength</div></td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-orange-500/20 text-orange-400 rounded-lg py-2 px-3 text-center text-xs font-semibold">Zumba</div></td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-titan-red/20 text-titan-red rounded-lg py-2 px-3 text-center text-xs font-semibold">Strength</div></td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-orange-500/20 text-orange-400 rounded-lg py-2 px-3 text-center text-xs font-semibold">Zumba</div></td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-titan-red/20 text-titan-red rounded-lg py-2 px-3 text-center text-xs font-semibold">Strength</div></td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-titan-red/20 text-titan-red rounded-lg py-2 px-3 text-center text-xs font-semibold">HIIT</div></td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-green-500/20 text-green-400 rounded-lg py-2 px-3 text-center text-xs font-semibold">Functional</div></td>
+                        </tr>
+                        <tr class="border-b border-white/5">
+                            <td class="py-4 px-6 text-white font-medium">06:00 PM</td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-titan-red/20 text-titan-red rounded-lg py-2 px-3 text-center text-xs font-semibold">HIIT</div></td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-blue-500/20 text-blue-400 rounded-lg py-2 px-3 text-center text-xs font-semibold">CrossFit</div></td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-titan-red/20 text-titan-red rounded-lg py-2 px-3 text-center text-xs font-semibold">HIIT</div></td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-blue-500/20 text-blue-400 rounded-lg py-2 px-3 text-center text-xs font-semibold">CrossFit</div></td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-titan-red/20 text-titan-red rounded-lg py-2 px-3 text-center text-xs font-semibold">HIIT</div></td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-orange-500/20 text-orange-400 rounded-lg py-2 px-3 text-center text-xs font-semibold">Zumba</div></td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-purple-500/20 text-purple-400 rounded-lg py-2 px-3 text-center text-xs font-semibold">Yoga</div></td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-6 text-white font-medium">07:00 PM</td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-titan-red/20 text-titan-red rounded-lg py-2 px-3 text-center text-xs font-semibold">Strength</div></td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-titan-red/20 text-titan-red rounded-lg py-2 px-3 text-center text-xs font-semibold">Strength</div></td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-titan-red/20 text-titan-red rounded-lg py-2 px-3 text-center text-xs font-semibold">Strength</div></td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-titan-red/20 text-titan-red rounded-lg py-2 px-3 text-center text-xs font-semibold">Strength</div></td>
+                            <td class="py-4 px-6"><div class="schedule-cell bg-titan-red/20 text-titan-red rounded-lg py-2 px-3 text-center text-xs font-semibold">Strength</div></td>
+                            <td class="py-4 px-6 text-gray-600 text-center">Closed</td>
+                            <td class="py-4 px-6 text-gray-600 text-center">Closed</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-6 mt-8">
+                <div class="flex items-center gap-2">
+                    <div class="w-4 h-4 bg-titan-red/20 rounded"></div>
+                    <span class="text-gray-400 text-sm">HIIT / Strength</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <div class="w-4 h-4 bg-purple-500/20 rounded"></div>
+                    <span class="text-gray-400 text-sm">Yoga</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <div class="w-4 h-4 bg-blue-500/20 rounded"></div>
+                    <span class="text-gray-400 text-sm">CrossFit</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <div class="w-4 h-4 bg-orange-500/20 rounded"></div>
+                    <span class="text-gray-400 text-sm">Zumba</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <div class="w-4 h-4 bg-green-500/20 rounded"></div>
+                    <span class="text-gray-400 text-sm">Functional</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-4xl"></div>
+
+    <!-- Transformation Gallery -->
+    <section id="transformations" class="py-24 bg-titan-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-titan-red font-semibold tracking-wider text-sm uppercase">Results</span>
+                <h2 class="font-bebas text-5xl sm:text-6xl text-white mt-2 tracking-wide">TRANSFORMATION GALLERY</h2>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Real members. Real results. Real inspiration.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div data-aos="fade-up" data-aos-delay="0" class="comparison-slider rounded-2xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&q=80" alt="Transformation 1" class="w-full h-96 object-cover">
+                    <div class="before-label">Before</div>
+                    <div class="after-label" style="border-right-color: #22c55e;">After</div>
+                    <div class="absolute top-4 left-4 bg-titan-red px-4 py-2 rounded-lg">
+                        <div class="text-white font-bold text-lg">-25 KG</div>
+                    </div>
+                    <div class="absolute bottom-16 left-4 right-4">
+                        <h4 class="text-white font-bold text-lg">Ramesh Khatri</h4>
+                        <p class="text-gray-300 text-sm">6 Month Transformation</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="100" class="comparison-slider rounded-2xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=600&q=80" alt="Transformation 2" class="w-full h-96 object-cover">
+                    <div class="before-label">Before</div>
+                    <div class="after-label" style="border-right-color: #22c55e;">After</div>
+                    <div class="absolute top-4 left-4 bg-titan-red px-4 py-2 rounded-lg">
+                        <div class="text-white font-bold text-lg">+15 KG MUSCLE</div>
+                    </div>
+                    <div class="absolute bottom-16 left-4 right-4">
+                        <h4 class="text-white font-bold text-lg">Suman Gurung</h4>
+                        <p class="text-gray-300 text-sm">1 Year Muscle Gain</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200" class="comparison-slider rounded-2xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9a50e?w=600&q=80" alt="Transformation 3" class="w-full h-96 object-cover">
+                    <div class="before-label">Before</div>
+                    <div class="after-label" style="border-right-color: #22c55e;">After</div>
+                    <div class="absolute top-4 left-4 bg-titan-red px-4 py-2 rounded-lg">
+                        <div class="text-white font-bold text-lg">-18 KG</div>
+                    </div>
+                    <div class="absolute bottom-16 left-4 right-4">
+                        <h4 class="text-white font-bold text-lg">Anita Sharma</h4>
+                        <p class="text-gray-300 text-sm">4 Month Weight Loss</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-4xl"></div>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-24 bg-titan-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-titan-red font-semibold tracking-wider text-sm uppercase">Testimonials</span>
+                <h2 class="font-bebas text-5xl sm:text-6xl text-white mt-2 tracking-wide">MEMBER REVIEWS</h2>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Hear from the community that makes Titan Fitness special.</p>
+            </div>
+
+            <div data-aos="fade-up" class="relative max-w-4xl mx-auto">
+                <div id="testimonial-container">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-slide active bg-titan-gray rounded-2xl p-8 md:p-12 border border-white/5">
+                        <div class="flex flex-col md:flex-row gap-8 items-center">
+                            <div class="flex-shrink-0">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80" alt="Member" class="w-24 h-24 rounded-full object-cover border-2 border-titan-red">
+                            </div>
+                            <div class="flex-1 text-center md:text-left">
+                                <div class="star-rating text-lg mb-3">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <p class="text-gray-300 text-lg leading-relaxed mb-4">"Titan Fitness completely changed my life. In just 6 months, I lost 25kg and gained confidence I never knew I had. The trainers are incredibly supportive and the community keeps me motivated every single day."</p>
+                                <h4 class="text-white font-bold text-lg">Bikash Thapa</h4>
+                                <p class="text-titan-red text-sm">Member since 2022</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-slide bg-titan-gray rounded-2xl p-8 md:p-12 border border-white/5">
+                        <div class="flex flex-col md:flex-row gap-8 items-center">
+                            <div class="flex-shrink-0">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80" alt="Member" class="w-24 h-24 rounded-full object-cover border-2 border-titan-red">
+                            </div>
+                            <div class="flex-1 text-center md:text-left">
+                                <div class="star-rating text-lg mb-3">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <p class="text-gray-300 text-lg leading-relaxed mb-4">"As a working mom, I needed a gym that understood my schedule. Titan's flexible class timings and childcare-friendly environment made it possible for me to prioritize my health. Best decision I ever made!"</p>
+                                <h4 class="text-white font-bold text-lg">Sarita KC</h4>
+                                <p class="text-titan-red text-sm">Member since 2023</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-slide bg-titan-gray rounded-2xl p-8 md:p-12 border border-white/5">
+                        <div class="flex flex-col md:flex-row gap-8 items-center">
+                            <div class="flex-shrink-0">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80" alt="Member" class="w-24 h-24 rounded-full object-cover border-2 border-titan-red">
+                            </div>
+                            <div class="flex-1 text-center md:text-left">
+                                <div class="star-rating text-lg mb-3">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <p class="text-gray-300 text-lg leading-relaxed mb-4">"The equipment here is world-class. I've trained in gyms across Europe and Asia, and Titan Fitness stands shoulder to shoulder with the best. The personal training program helped me prepare for my first marathon."</p>
+                                <h4 class="text-white font-bold text-lg">Prakash Joshi</h4>
+                                <p class="text-titan-red text-sm">Member since 2021</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-slide bg-titan-gray rounded-2xl p-8 md:p-12 border border-white/5">
+                        <div class="flex flex-col md:flex-row gap-8 items-center">
+                            <div class="flex-shrink-0">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80" alt="Member" class="w-24 h-24 rounded-full object-cover border-2 border-titan-red">
+                            </div>
+                            <div class="flex-1 text-center md:text-left">
+                                <div class="star-rating text-lg mb-3">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <p class="text-gray-300 text-lg leading-relaxed mb-4">"I joined Titan after my doctor recommended exercise for my health. The senior fitness program is perfect—low impact but effective. My blood pressure is normal now and I feel 10 years younger!"</p>
+                                <h4 class="text-white font-bold text-lg">Gita Devi</h4>
+                                <p class="text-titan-red text-sm">Member since 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-center gap-3 mt-8">
+                    <button onclick="changeTestimonial(-1)" class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-titan-red hover:border-titan-red transition-all">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button onclick="changeTestimonial(1)" class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-titan-red hover:border-titan-red transition-all">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-4xl"></div>
+
+    <!-- Free Trial Booking Form -->
+    <section id="trial" class="py-24 bg-titan-dark relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&q=80')] bg-cover bg-center opacity-5"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <span class="text-titan-red font-semibold tracking-wider text-sm uppercase">Free Trial</span>
+                <h2 class="font-bebas text-5xl sm:text-6xl text-white mt-2 tracking-wide">START YOUR JOURNEY</h2>
+                <p class="text-gray-400 mt-4">Book your complimentary trial session and experience the Titan difference.</p>
+            </div>
+
+            <form id="trialForm" data-aos="fade-up" class="bg-titan-gray/80 backdrop-blur-sm border border-white/10 rounded-2xl p-8 md:p-12">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Full Name *</label>
+                        <input type="text" id="trialName" required class="w-full bg-titan-black border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-titan-red transition-colors" placeholder="John Doe">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Phone Number *</label>
+                        <input type="tel" id="trialPhone" required class="w-full bg-titan-black border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-titan-red transition-colors" placeholder="+977 98XXXXXXXX">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Email Address *</label>
+                        <input type="email" id="trialEmail" required class="w-full bg-titan-black border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-titan-red transition-colors" placeholder="john@example.com">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Fitness Goal *</label>
+                        <select id="trialGoal" required class="w-full bg-titan-black border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-titan-red transition-colors">
+                            <option value="">Select your goal</option>
+                            <option value="Weight Loss">Weight Loss</option>
+                            <option value="Muscle Building">Muscle Building</option>
+                            <option value="Strength Training">Strength Training</option>
+                            <option value="General Fitness">General Fitness</option>
+                            <option value="Sports Performance">Sports Performance</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Preferred Date *</label>
+                        <input type="date" id="trialDate" required class="w-full bg-titan-black border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-titan-red transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Preferred Time *</label>
+                        <select id="trialTime" required class="w-full bg-titan-black border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-titan-red transition-colors">
+                            <option value="">Select time</option>
+                            <option value="06:00 AM">06:00 AM</option>
+                            <option value="07:00 AM">07:00 AM</option>
+                            <option value="09:00 AM">09:00 AM</option>
+                            <option value="05:00 PM">05:00 PM</option>
+                            <option value="06:00 PM">06:00 PM</option>
+                            <option value="07:00 PM">07:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <label class="block text-sm font-medium text-gray-300 mb-2">Message (Optional)</label>
+                    <textarea id="trialMessage" rows="4" class="w-full bg-titan-black border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-titan-red transition-colors" placeholder="Tell us about your fitness history or any specific requirements..."></textarea>
+                </div>
+                <div class="mt-8">
+                    <button type="submit" class="btn-primary w-full py-4 rounded-xl text-lg font-bold text-white tracking-wide">
+                        <i class="fab fa-whatsapp mr-2"></i> BOOK FREE TRIAL VIA WHATSAPP
+                    </button>
+                    <p class="text-center text-gray-500 text-sm mt-4">By submitting, you agree to our terms and will be redirected to WhatsApp to confirm your booking.</p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-4xl"></div>
+
+    <!-- Facilities Section -->
+    <section id="facilities" class="py-24 bg-titan-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-titan-red font-semibold tracking-wider text-sm uppercase">Facilities</span>
+                <h2 class="font-bebas text-5xl sm:text-6xl text-white mt-2 tracking-wide">WORLD-CLASS FACILITIES</h2>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Every detail designed for your comfort, safety, and performance.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div data-aos="fade-up" data-aos-delay="0" class="group relative rounded-2xl overflow-hidden h-72">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80" alt="Cardio Zone" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <div class="w-12 h-12 bg-titan-red rounded-xl flex items-center justify-center mb-4">
+                            <i class="fas fa-heartbeat text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-1">Cardio Zone</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity">Treadmills, ellipticals, rowers, and bikes with entertainment systems.</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="100" class="group relative rounded-2xl overflow-hidden h-72">
+                    <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&q=80" alt="Weight Training" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <div class="w-12 h-12 bg-titan-red rounded-xl flex items-center justify-center mb-4">
+                            <i class="fas fa-dumbbell text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-1">Weight Training Area</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity">Free weights, plate-loaded, and selectorized machines for every muscle group.</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200" class="group relative rounded-2xl overflow-hidden h-72">
+                    <img src="https://images.unsplash.com/photo-1517963879433-6ad2b056d712?w=600&q=80" alt="Functional Training" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <div class="w-12 h-12 bg-titan-red rounded-xl flex items-center justify-center mb-4">
+                            <i class="fas fa-running text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-1">Functional Training</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity">TRX, kettlebells, battle ropes, and plyometric boxes for dynamic workouts.</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="0" class="group relative rounded-2xl overflow-hidden h-72">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80" alt="Locker Rooms" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <div class="w-12 h-12 bg-titan-red rounded-xl flex items-center justify-center mb-4">
+                            <i class="fas fa-lock text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-1">Locker Rooms</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity">Digital lockers, vanity stations, and premium amenities.</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="100" class="group relative rounded-2xl overflow-hidden h-72">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&q=80" alt="Showers" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <div class="w-12 h-12 bg-titan-red rounded-xl flex items-center justify-center mb-4">
+                            <i class="fas fa-shower text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-1">Showers & Sauna</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity">Rain showers, steam room, and dry sauna for post-workout recovery.</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200" class="group relative rounded-2xl overflow-hidden h-72">
+                    <img src="https://images.unsplash.com/photo-1555243892-644c3f65f0f7?w=600&q=80" alt="Nutrition Bar" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <div class="w-12 h-12 bg-titan-red rounded-xl flex items-center justify-center mb-4">
+                            <i class="fas fa-blender text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-1">Nutrition Bar</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity">Protein shakes, healthy meals, and pre/post workout supplements.</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="0" class="group relative rounded-2xl overflow-hidden h-72 md:col-span-2 lg:col-span-3">
+                    <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=1200&q=80" alt="Group Studio" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <div class="w-12 h-12 bg-titan-red rounded-xl flex items-center justify-center mb-4">
+                            <i class="fas fa-users text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-1">Group Class Studio</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity max-w-xl">Premium sound system, mirrored walls, and specialized flooring for yoga, Zumba, and HIIT classes with capacity for 40 members.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-4xl"></div>
+
+    <!-- BMI Calculator -->
+    <section id="bmi" class="py-24 bg-titan-dark">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <span class="text-titan-red font-semibold tracking-wider text-sm uppercase">Health Tool</span>
+                <h2 class="font-bebas text-5xl sm:text-6xl text-white mt-2 tracking-wide">BMI CALCULATOR</h2>
+                <p class="text-gray-400 mt-4">Know your body mass index and take the first step toward your fitness goals.</p>
+            </div>
+
+            <div data-aos="fade-up" class="bg-titan-gray border border-white/10 rounded-2xl p-8 md:p-12">
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Height (cm)</label>
+                        <input type="number" id="bmiHeight" placeholder="175" class="w-full bg-titan-black border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-titan-red transition-colors text-lg">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Weight (kg)</label>
+                        <input type="number" id="bmiWeight" placeholder="70" class="w-full bg-titan-black border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-titan-red transition-colors text-lg">
+                    </div>
+                </div>
+                <button onclick="calculateBMI()" class="btn-primary w-full py-4 rounded-xl text-lg font-bold text-white tracking-wide mb-8">
+                    CALCULATE BMI
+                </button>
+
+                <div id="bmiResult" class="hidden">
+                    <div class="bg-titan-black rounded-xl p-6 border border-white/10">
+                        <div class="text-center mb-4">
+                            <div class="text-5xl font-bold text-white mb-2" id="bmiValue">22.5</div>
+                            <div class="text-xl font-medium" id="bmiCategory">Normal Weight</div>
+                        </div>
+                        <div class="relative h-4 bg-titan-light-gray rounded-full overflow-hidden mb-2">
+                            <div id="bmiBar" class="absolute top-0 left-0 h-full bg-titan-red rounded-full transition-all duration-1000" style="width: 0%"></div>
+                        </div>
+                        <div class="flex justify-between text-xs text-gray-500">
+                            <span>Underweight</span>
+                            <span>Normal</span>
+                            <span>Overweight</span>
+                            <span>Obese</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mt-4 text-center" id="bmiAdvice">Your BMI indicates you are at a healthy weight. Keep up the great work!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-4xl"></div>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-24 bg-titan-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-titan-red font-semibold tracking-wider text-sm uppercase">Blog</span>
+                <h2 class="font-bebas text-5xl sm:text-6xl text-white mt-2 tracking-wide">FITNESS INSIGHTS</h2>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Expert tips, nutrition advice, and workout strategies from our team.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <article data-aos="fade-up" data-aos-delay="0" class="bg-titan-gray rounded-2xl overflow-hidden card-hover group">
+                    <div class="img-zoom h-56">
+                        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&q=80" alt="Nutrition Myths" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="px-3 py-1 bg-titan-red/20 text-titan-red text-xs rounded-full">Nutrition</span>
+                            <span class="text-gray-500 text-xs">Jan 15, 2026</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-titan-red transition-colors">10 Nutrition Myths Debunked by Science</h3>
+                        <p class="text-gray-400 text-sm mb-4">From carb timing to protein absorption, we separate fact from fiction with peer-reviewed research.</p>
+                        <a href="#" class="text-titan-red text-sm font-semibold hover:underline">Read More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </article>
+
+                <article data-aos="fade-up" data-aos-delay="100" class="bg-titan-gray rounded-2xl overflow-hidden card-hover group">
+                    <div class="img-zoom h-56">
+                        <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80" alt="Strength Training" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="px-3 py-1 bg-titan-red/20 text-titan-red text-xs rounded-full">Training</span>
+                            <span class="text-gray-500 text-xs">Jan 10, 2026</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-titan-red transition-colors">Beginner's Guide to Strength Training</h3>
+                        <p class="text-gray-400 text-sm mb-4">Everything you need to know to start lifting safely and effectively from day one.</p>
+                        <a href="#" class="text-titan-red text-sm font-semibold hover:underline">Read More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </article>
+
+                <article data-aos="fade-up" data-aos-delay="200" class="bg-titan-gray rounded-2xl overflow-hidden card-hover group">
+                    <div class="img-zoom h-56">
+                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80" alt="Recovery" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="px-3 py-1 bg-titan-red/20 text-titan-red text-xs rounded-full">Recovery</span>
+                            <span class="text-gray-500 text-xs">Jan 5, 2026</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-titan-red transition-colors">The Importance of Recovery in Fitness</h3>
+                        <p class="text-gray-400 text-sm mb-4">Why rest days, sleep, and active recovery are just as important as your workouts.</p>
+                        <a href="#" class="text-titan-red text-sm font-semibold hover:underline">Read More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-4xl"></div>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-titan-dark">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-titan-red font-semibold tracking-wider text-sm uppercase">FAQ</span>
+                <h2 class="font-bebas text-5xl sm:text-6xl text-white mt-2 tracking-wide">COMMON QUESTIONS</h2>
+                <p class="text-gray-400 mt-4">Everything you need to know before joining Titan Fitness.</p>
+            </div>
+
+            <div data-aos="fade-up" class="space-y-0">
+                <div class="faq-item">
+                    <div class="faq-question flex justify-between items-center py-6" onclick="toggleFaq(this)">
+                        <h3 class="text-lg font-medium text-white pr-4">What are the gym operating hours?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-titan-red"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400 pb-0">
+                        <p class="pb-6">We are open 7 days a week from 5:00 AM to 10:00 PM. On public holidays, we operate from 7:00 AM to 8:00 PM. Our facilities are fully staffed during all operating hours for your safety and convenience.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question flex justify-between items-center py-6" onclick="toggleFaq(this)">
+                        <h3 class="text-lg font-medium text-white pr-4">Do you offer personal training services?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-titan-red"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400 pb-0">
+                        <p class="pb-6">Yes! We have certified personal trainers available for one-on-one sessions. Packages start from Rs. 15,000/month for 12 sessions. Each session is 60 minutes and includes a customized workout plan, nutrition guidance, and progress tracking.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question flex justify-between items-center py-6" onclick="toggleFaq(this)">
+                        <h3 class="text-lg font-medium text-white pr-4">What types of memberships do you offer?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-titan-red"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400 pb-0">
+                        <p class="pb-6">We offer Monthly (Rs. 3,500), Quarterly (Rs. 9,000), Annual (Rs. 30,000), Personal Training (Rs. 15,000/month), and Premium VIP (Rs. 50,000/year) memberships. All memberships include full gym access, with higher tiers including group classes, personal training sessions, and nutrition plans.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question flex justify-between items-center py-6" onclick="toggleFaq(this)">
+                        <h3 class="text-lg font-medium text-white pr-4">Is there a joining fee or registration fee?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-titan-red"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400 pb-0">
+                        <p class="pb-6">We charge a one-time registration fee of Rs. 1,000 which includes your membership card, fitness assessment, and body composition analysis. However, we frequently run promotions where this fee is waived.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question flex justify-between items-center py-6" onclick="toggleFaq(this)">
+                        <h3 class="text-lg font-medium text-white pr-4">Can I freeze or pause my membership?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-titan-red"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400 pb-0">
+                        <p class="pb-6">Yes, you can freeze your membership for up to 3 months per year for medical reasons or travel. A nominal fee of Rs. 500/month applies during the freeze period. Please notify us at least 7 days in advance.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question flex justify-between items-center py-6" onclick="toggleFaq(this)">
+                        <h3 class="text-lg font-medium text-white pr-4">What equipment brands do you use?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-titan-red"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400 pb-0">
+                        <p class="pb-6">We feature premium equipment from Technogym, Life Fitness, Hammer Strength, Rogue Fitness, and Eleiko. Our cardio zone includes the latest treadmills with entertainment systems, and our strength area has both plate-loaded and selectorized machines.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question flex justify-between items-center py-6" onclick="toggleFaq(this)">
+                        <h3 class="text-lg font-medium text-white pr-4">Do you provide nutrition and diet plans?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-titan-red"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400 pb-0">
+                        <p class="pb-6">Absolutely. Our certified nutritionists create customized meal plans based on your goals, dietary preferences, and lifestyle. Nutrition counseling is included in Annual, Personal Training, and VIP memberships. Individual consultations are also available for Rs. 2,000/session.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question flex justify-between items-center py-6" onclick="toggleFaq(this)">
+                        <h3 class="text-lg font-medium text-white pr-4">Are there group fitness classes available?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-titan-red"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400 pb-0">
+                        <p class="pb-6">Yes! We offer Yoga, Zumba, HIIT, CrossFit, Strength Training, and Functional Fitness classes. Classes are included in Quarterly, Annual, and VIP memberships. Drop-in class rates are Rs. 500 per session for non-members.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question flex justify-between items-center py-6" onclick="toggleFaq(this)">
+                        <h3 class="text-lg font-medium text-white pr-4">What is the minimum age requirement to join?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-titan-red"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400 pb-0">
+                        <p class="pb-6">Members must be at least 16 years old. Those aged 16-17 require parental consent and supervision during their first month. We also offer a dedicated Teen Fitness program for ages 13-15 on weekends.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question flex justify-between items-center py-6" onclick="toggleFaq(this)">
+                        <h3 class="text-lg font-medium text-white pr-4">Do you have locker rooms and showers?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-titan-red"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400 pb-0">
+                        <p class="pb-6">Yes, we have separate locker rooms for men and women with digital lockers, rain showers, vanity stations, and premium toiletries. We also offer a steam room and dry sauna for recovery.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question flex justify-between items-center py-6" onclick="toggleFaq(this)">
+                        <h3 class="text-lg font-medium text-white pr-4">Is parking available at the gym?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-titan-red"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400 pb-0">
+                        <p class="pb-6">Yes, we have a dedicated parking area with space for 50+ vehicles. Parking is free for all members during their workout sessions. We also have secure bicycle parking.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question flex justify-between items-center py-6" onclick="toggleFaq(this)">
+                        <h3 class="text-lg font-medium text-white pr-4">Can I bring a guest or friend?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-titan-red"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400 pb-0">
+                        <p class="pb-6">Annual and VIP members receive 4 guest passes per month. Additional guests can visit for Rs. 1,000 per day. All guests must sign a waiver and attend an orientation before using equipment.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question flex justify-between items-center py-6" onclick="toggleFaq(this)">
+                        <h3 class="text-lg font-medium text-white pr-4">What safety measures do you have in place?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-titan-red"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400 pb-0">
+                        <p class="pb-6">We maintain hospital-grade sanitation with 3x daily deep cleaning. All staff are CPR and First Aid certified. We have AED devices on every floor, 24/7 CCTV surveillance, and trained security personnel.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question flex justify-between items-center py-6" onclick="toggleFaq(this)">
+                        <h3 class="text-lg font-medium text-white pr-4">Do you offer corporate or group discounts?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-titan-red"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400 pb-0">
+                        <p class="pb-6">Yes! We offer corporate wellness packages for companies with 10+ employees. Group discounts of 15-25% are available for families and friends signing up together. Contact our sales team for custom quotes.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question flex justify-between items-center py-6" onclick="toggleFaq(this)">
+                        <h3 class="text-lg font-medium text-white pr-4">What should I bring for my first visit?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-titan-red"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400 pb-0">
+                        <p class="pb-6">Bring a valid ID, comfortable workout clothes, athletic shoes, a water bottle, and a small towel. We provide lockers, but you may bring your own lock. We also sell gym essentials at our front desk if you forget anything.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question flex justify-between items-center py-6" onclick="toggleFaq(this)">
+                        <h3 class="text-lg font-medium text-white pr-4">How do I book a free trial session?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-titan-red"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400 pb-0">
+                        <p class="pb-6">Simply fill out the Free Trial form on our website or message us on WhatsApp at +977 9768832052. We'll confirm your booking within 2 hours. Your trial includes a full gym tour, fitness assessment, and a 45-minute workout session with a trainer.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question flex justify-between items-center py-6" onclick="toggleFaq(this)">
+                        <h3 class="text-lg font-medium text-white pr-4">Do you have Wi-Fi in the gym?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-titan-red"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400 pb-0">
+                        <p class="pb-6">Yes, we offer high-speed fiber Wi-Fi throughout the facility. The network name is "TitanFitness_Guest" and the password is available at the front desk. Our cardio machines also have built-in entertainment systems with Netflix and YouTube.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question flex justify-between items-center py-6" onclick="toggleFaq(this)">
+                        <h3 class="text-lg font-medium text-white pr-4">What is your cancellation policy?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-titan-red"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400 pb-0">
+                        <p class="pb-6">Monthly memberships can be cancelled with 15 days notice. Quarterly and Annual memberships are non-refundable but can be transferred to another person for a Rs. 1,000 transfer fee. Please review our full terms at the front desk.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question flex justify-between items-center py-6" onclick="toggleFaq(this)">
+                        <h3 class="text-lg font-medium text-white pr-4">Are your trainers certified?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-titan-red"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400 pb-0">
+                        <p class="pb-6">All Titan Fitness trainers hold internationally recognized certifications including NSCA, ACE, ISSA, CrossFit L1-L3, and Yoga Alliance RYT-200/500. They also undergo continuous in-house education and monthly performance reviews.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question flex justify-between items-center py-6" onclick="toggleFaq(this)">
+                        <h3 class="text-lg font-medium text-white pr-4">Do you have a nutrition bar or cafe?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-titan-red"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400 pb-0">
+                        <p class="pb-6">Yes! Our Titan Nutrition Bar serves protein shakes, pre-workout drinks, healthy meals, and snacks. We also offer meal prep services for members. All items are designed by our nutritionists to support your fitness goals.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question flex justify-between items-center py-6" onclick="toggleFaq(this)">
+                        <h3 class="text-lg font-medium text-white pr-4">How crowded does the gym get?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-titan-red"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400 pb-0">
+                        <p class="pb-6">Peak hours are typically 6:00-9:00 AM and 5:00-8:00 PM on weekdays. We limit memberships to ensure equipment is always available. Our facility spans 15,000 sq ft with over 200 pieces of equipment, so even during peak times, wait times are minimal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-4xl"></div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-titan-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-titan-red font-semibold tracking-wider text-sm uppercase">Contact</span>
+                <h2 class="font-bebas text-5xl sm:text-6xl text-white mt-2 tracking-wide">GET IN TOUCH</h2>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Visit us, call us, or drop a message. We're here to help you start your fitness journey.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div data-aos="fade-right" class="space-y-8">
+                    <div class="flex items-start gap-6">
+                        <div class="w-14 h-14 bg-titan-red/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-map-marker-alt text-titan-red text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Location</h3>
+                            <p class="text-gray-400">Thamel, Kathmandu, Nepal</p>
+                            <p class="text-gray-400">Near Garden of Dreams</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-6">
+                        <div class="w-14 h-14 bg-titan-red/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-phone text-titan-red text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Phone</h3>
+                            <p class="text-gray-400">+977 9768832052</p>
+                            <p class="text-gray-400">+977 1-4444444</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-6">
+                        <div class="w-14 h-14 bg-titan-red/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-envelope text-titan-red text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Email</h3>
+                            <p class="text-gray-400">info@titanfitness.com.np</p>
+                            <p class="text-gray-400">memberships@titanfitness.com.np</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-6">
+                        <div class="w-14 h-14 bg-titan-red/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-clock text-titan-red text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Working Hours</h3>
+                            <p class="text-gray-400">Monday - Friday: 5:00 AM - 10:00 PM</p>
+                            <p class="text-gray-400">Saturday - Sunday: 6:00 AM - 9:00 PM</p>
+                            <p class="text-gray-400">Public Holidays: 7:00 AM - 8:00 PM</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 pt-4">
+                        <a href="#" class="w-12 h-12 bg-titan-gray border border-white/10 rounded-xl flex items-center justify-center text-white hover:bg-titan-red hover:border-titan-red transition-all">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-titan-gray border border-white/10 rounded-xl flex items-center justify-center text-white hover:bg-titan-red hover:border-titan-red transition-all">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-titan-gray border border-white/10 rounded-xl flex items-center justify-center text-white hover:bg-titan-red hover:border-titan-red transition-all">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-titan-gray border border-white/10 rounded-xl flex items-center justify-center text-white hover:bg-titan-red hover:border-titan-red transition-all">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left" class="map-container h-96 lg:h-full min-h-[400px]">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.231659534039!2d85.3125!3d27.7154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb18f0d5e0a6e5%3A0x1e3b5e5b5e5b5e5b!2sThamel%2C%20Kathmandu%2044600%2C%20Nepal!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-titan-black border-t border-white/5 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <a href="#" class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-titan-red rounded-lg flex items-center justify-center">
+                            <i class="fas fa-dumbbell text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <span class="font-bebas text-2xl tracking-wider text-white">TITAN FITNESS</span>
+                            <span class="block text-[0.6rem] text-titan-muted tracking-[0.3em] -mt-1">GYM & FITNESS</span>
+                        </div>
+                    </a>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Kathmandu's premier fitness destination. Transform your body, elevate your mind, and join a community committed to excellence.</p>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-10 h-10 bg-titan-gray rounded-lg flex items-center justify-center text-gray-400 hover:bg-titan-red hover:text-white transition-all"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 bg-titan-gray rounded-lg flex items-center justify-center text-gray-400 hover:bg-titan-red hover:text-white transition-all"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 bg-titan-gray rounded-lg flex items-center justify-center text-gray-400 hover:bg-titan-red hover:text-white transition-all"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#about" class="text-gray-400 text-sm hover:text-titan-red transition-colors">About Us</a></li>
+                        <li><a href="#trainers" class="text-gray-400 text-sm hover:text-titan-red transition-colors">Our Trainers</a></li>
+                        <li><a href="#programs" class="text-gray-400 text-sm hover:text-titan-red transition-colors">Programs</a></li>
+                        <li><a href="#schedule" class="text-gray-400 text-sm hover:text-titan-red transition-colors">Class Schedule</a></li>
+                        <li><a href="#blog" class="text-gray-400 text-sm hover:text-titan-red transition-colors">Fitness Blog</a></li>
+                        <li><a href="#contact" class="text-gray-400 text-sm hover:text-titan-red transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6">Memberships</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#membership" class="text-gray-400 text-sm hover:text-titan-red transition-colors">Monthly Plan</a></li>
+                        <li><a href="#membership" class="text-gray-400 text-sm hover:text-titan-red transition-colors">Quarterly Plan</a></li>
+                        <li><a href="#membership" class="text-gray-400 text-sm hover:text-titan-red transition-colors">Annual Plan</a></li>
+                        <li><a href="#membership" class="text-gray-400 text-sm hover:text-titan-red transition-colors">Personal Training</a></li>
+                        <li><a href="#membership" class="text-gray-400 text-sm hover:text-titan-red transition-colors">Premium VIP</a></li>
+                        <li><a href="#trial" class="text-gray-400 text-sm hover:text-titan-red transition-colors">Free Trial</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6">Contact Info</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3 text-gray-400 text-sm">
+                            <i class="fas fa-map-marker-alt text-titan-red mt-1"></i>
+                            <span>Thamel, Kathmandu, Nepal</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-400 text-sm">
+                            <i class="fas fa-phone text-titan-red mt-1"></i>
+                            <span>+977 9768832052</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-400 text-sm">
+                            <i class="fas fa-envelope text-titan-red mt-1"></i>
+                            <span>info@titanfitness.com.np</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-400 text-sm">
+                            <i class="fas fa-clock text-titan-red mt-1"></i>
+                            <span>5:00 AM - 10:00 PM Daily</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">© 2026 Titan Fitness Gym. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="text-gray-500 text-sm hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-gray-500 text-sm hover:text-white transition-colors">Terms of Service</a>
+                    <a href="#" class="text-gray-500 text-sm hover:text-white transition-colors">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/9779768832052?text=Hi%20Titan%20Fitness!%20I%20would%20like%20to%20know%20more%20about%20your%20membership%20plans." target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- AI Fitness Receptionist Chat Widget -->
+    <div id="chatWidget" class="chat-widget">
+        <div class="bg-titan-red p-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                    <i class="fas fa-robot text-white"></i>
+                </div>
+                <div>
+                    <div class="text-white font-bold text-sm">Titan AI Assistant</div>
+                    <div class="text-white/70 text-xs flex items-center gap-1">
+                        <span class="w-2 h-2 bg-green-400 rounded-full"></span> Online
+                    </div>
+                </div>
+            </div>
+            <button onclick="toggleChat()" class="text-white/70 hover:text-white">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="chatMessages" class="chat-messages flex flex-col">
+            <div class="chat-message bot">
+                <div class="font-semibold mb-1 text-titan-red text-xs">Titan AI</div>
+                Hello! I'm your Titan Fitness AI assistant. How can I help you today? 💪
+                <div class="mt-3 flex flex-wrap gap-2">
+                    <button onclick="sendQuickReply('membership prices')" class="quick-reply">Membership Prices</button>
+                    <button onclick="sendQuickReply('gym timings')" class="quick-reply">Gym Timings</button>
+                    <button onclick="sendQuickReply('class schedule')" class="quick-reply">Class Schedule</button>
+                    <button onclick="sendQuickReply('trainers')" class="quick-reply">Trainers</button>
+                    <button onclick="sendQuickReply('free trial')" class="quick-reply">Free Trial</button>
+                    <button onclick="sendQuickReply('nutrition')" class="quick-reply">Nutrition</button>
+                </div>
+            </div>
+        </div>
+        <div class="p-4 border-t border-white/10">
+            <div class="flex gap-2">
+                <input type="text" id="chatInput" placeholder="Type your question..." class="flex-1 bg-titan-black border border-white/10 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-titan-red" onkeypress="if(event.key==='Enter')sendMessage()">
+                <button onclick="sendMessage()" class="w-10 h-10 bg-titan-red rounded-xl flex items-center justify-center text-white hover:bg-titan-red-hover transition-colors">
+                    <i class="fas fa-paper-plane text-sm"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Toggle Button -->
+    <button id="chatToggle" onclick="toggleChat()" class="fixed bottom-[100px] right-[30px] w-[60px] h-[60px] bg-titan-red rounded-full flex items-center justify-center text-white text-2xl shadow-lg shadow-titan-red/30 z-[999] hover:scale-110 transition-transform">
+        <i class="fas fa-robot"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Navigation Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenuBtn = document.getElementById('close-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+
+        // Close mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = parseInt(counter.getAttribute('data-target'));
+                    const duration = 2000;
+                    const step = target / (duration / 16);
+                    let current = 0;
+
+                    const updateCounter = () => {
+                        current += step;
+                        if (current < target) {
+                            counter.textContent = Math.floor(current).toLocaleString() + (target > 100 ? '+' : '');
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            counter.textContent = target.toLocaleString() + (target > 100 ? '+' : '');
+                        }
+                    };
+
+                    updateCounter();
+                    counterObserver.unobserve(counter);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        counters.forEach(counter => counterObserver.observe(counter));
+
+        // Testimonial Slider
+        let currentTestimonial = 0;
+        const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+
+        function changeTestimonial(direction) {
+            testimonialSlides[currentTestimonial].classList.remove('active');
+            currentTestimonial = (currentTestimonial + direction + testimonialSlides.length) % testimonialSlides.length;
+            testimonialSlides[currentTestimonial].classList.add('active');
+        }
+
+        // Auto-advance testimonials
+        setInterval(() => changeTestimonial(1), 6000);
+
+        // FAQ Accordion
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('.faq-icon');
+            const isOpen = answer.classList.contains('open');
+
+            // Close all others
+            document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+            document.querySelectorAll('.faq-icon').forEach(i => i.classList.remove('rotate'));
+
+            if (!isOpen) {
+                answer.classList.add('open');
+                icon.classList.add('rotate');
+            }
+        }
+
+        // BMI Calculator
+        function calculateBMI() {
+            const height = parseFloat(document.getElementById('bmiHeight').value);
+            const weight = parseFloat(document.getElementById('bmiWeight').value);
+
+            if (!height || !weight) {
+                alert('Please enter both height and weight');
+                return;
+            }
+
+            const heightInMeters = height / 100;
+            const bmi = (weight / (heightInMeters * heightInMeters)).toFixed(1);
+
+            let category, color, advice;
+            let percentage = 0;
+
+            if (bmi < 18.5) {
+                category = 'Underweight';
+                color = '#3b82f6';
+                advice = 'Your BMI indicates you are underweight. Consult with our nutritionists to develop a healthy weight gain plan.';
+                percentage = 15;
+            } else if (bmi < 25) {
+                category = 'Normal Weight';
+                color = '#22c55e';
+                advice = 'Your BMI indicates you are at a healthy weight. Keep up the great work with regular exercise and balanced nutrition!';
+                percentage = 50;
+            } else if (bmi < 30) {
+                category = 'Overweight';
+                color = '#f59e0b';
+                advice = 'Your BMI indicates you are slightly above the ideal range. Our weight loss program can help you achieve your goals.';
+                percentage = 75;
+            } else {
+                category = 'Obese';
+                color = '#ef4444';
+                advice = 'Your BMI indicates obesity. We recommend consulting with our trainers for a personalized fitness and nutrition plan.';
+                percentage = 95;
+            }
+
+            document.getElementById('bmiValue').textContent = bmi;
+            document.getElementById('bmiCategory').textContent = category;
+            document.getElementById('bmiCategory').style.color = color;
+            document.getElementById('bmiAdvice').textContent = advice;
+            document.getElementById('bmiBar').style.width = percentage + '%';
+            document.getElementById('bmiBar').style.backgroundColor = color;
+            document.getElementById('bmiResult').classList.remove('hidden');
+        }
+
+        // Trial Form WhatsApp Integration
+        document.getElementById('trialForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('trialName').value;
+            const phone = document.getElementById('trialPhone').value;
+            const email = document.getElementById('trialEmail').value;
+            const goal = document.getElementById('trialGoal').value;
+            const date = document.getElementById('trialDate').value;
+            const time = document.getElementById('trialTime').value;
+            const message = document.getElementById('trialMessage').value;
+
+            const whatsappMessage = `New Gym Trial Request%0A%0AName: ${name}%0APhone: ${phone}%0AEmail: ${email}%0AFitness Goal: ${goal}%0ADate: ${date}%0ATime: ${time}%0AMessage: ${message || 'N/A'}`;
+
+            window.open(`https://wa.me/9779768832052?text=${whatsappMessage}`, '_blank');
+        });
+
+        function openTrial() {
+            document.getElementById('trial').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function contactTrainer(trainerName) {
+            const message = `Hi Titan Fitness! I would like to know more about training with ${trainerName}. Please share their availability and rates.`;
+            window.open(`https://wa.me/9779768832052?text=${encodeURIComponent(message)}`, '_blank');
+        }
+
+        // AI Chat Widget
+        const chatWidget = document.getElementById('chatWidget');
+        const chatMessages = document.getElementById('chatMessages');
+        const chatInput = document.getElementById('chatInput');
+        const chatToggle = document.getElementById('chatToggle');
+
+        function toggleChat() {
+            chatWidget.classList.toggle('active');
+            if (chatWidget.classList.contains('active')) {
+                chatToggle.style.display = 'none';
+            } else {
+                chatToggle.style.display = 'flex';
+            }
+        }
+
+        function addMessage(text, isUser = false) {
+            const div = document.createElement('div');
+            div.className = `chat-message ${isUser ? 'user' : 'bot'}`;
+            if (!isUser) {
+                div.innerHTML = `<div class="font-semibold mb-1 text-titan-red text-xs">Titan AI</div>${text}`;
+            } else {
+                div.textContent = text;
+            }
+            chatMessages.appendChild(div);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function showTyping() {
+            const typing = document.createElement('div');
+            typing.id = 'typingIndicator';
+            typing.className = 'typing-indicator';
+            typing.innerHTML = '<div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>';
+            chatMessages.appendChild(typing);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function hideTyping() {
+            const typing = document.getElementById('typingIndicator');
+            if (typing) typing.remove();
+        }
+
+        function getBotResponse(input) {
+            const text = input.toLowerCase();
+
+            if (text.includes('price') || text.includes('cost') || text.includes('membership') || text.includes('plan') || text.includes('fee') || text.includes('rs.')) {
+                return `Our membership plans are:<br><br>• <strong>Monthly:</strong> Rs. 3,500<br>• <strong>Quarterly:</strong> Rs. 9,000 (Save Rs. 1,500)<br>• <strong>Annual:</strong> Rs. 30,000 (Save Rs. 12,000 + 2 PT sessions)<br>• <strong>Personal Training:</strong> Rs. 15,000/month (12 sessions)<br>• <strong>Premium VIP:</strong> Rs. 50,000/year (All inclusive)<br><br>Would you like to book a free trial to experience our facilities?`;
+            }
+
+            if (text.includes('time') || text.includes('hour') || text.includes('open') || text.includes('close') || text.includes('timing')) {
+                return `Our gym hours are:<br><br>• <strong>Monday - Friday:</strong> 5:00 AM - 10:00 PM<br>• <strong>Saturday - Sunday:</strong> 6:00 AM - 9:00 PM<br>• <strong>Public Holidays:</strong> 7:00 AM - 8:00 PM<br><br>All group classes are scheduled within these hours. Would you like to see the class timetable?`;
+            }
+
+            if (text.includes('class') || text.includes('schedule') || text.includes('yoga') || text.includes('zumba') || text.includes('hiit') || text.includes('crossfit')) {
+                return `We offer 6 types of group classes:<br><br>• <strong>Yoga:</strong> Mon, Wed, Fri at 7:00 AM & 9:00 AM<br>• <strong>Zumba:</strong> Tue, Thu at 6:00 PM & 9:00 AM<br>• <strong>HIIT:</strong> Mon, Wed, Fri at 6:00 AM & 6:00 PM<br>• <strong>CrossFit:</strong> Tue, Thu, Sat at 7:00 AM<br>• <strong>Strength Training:</strong> Daily at 5:00 PM & 7:00 PM<br>• <strong>Functional Fitness:</strong> Sat, Sun at 10:00 AM<br><br>Classes are included in Quarterly, Annual, and VIP memberships.`;
+            }
+
+            if (text.includes('trainer') || text.includes('coach') || text.includes('instructor') || text.includes('personal')) {
+                return `We have 6 expert trainers:<br><br>• <strong>Rajesh Hamal</strong> - Head Coach, Strength & Conditioning (10+ yrs)<br>• <strong>Sunita Gurung</strong> - Yoga & Mindfulness (8 yrs)<br>• <strong>Mike Johnson</strong> - CrossFit & HIIT (12 yrs)<br>• <strong>Priya Sharma</strong> - Nutrition & Weight Loss (6 yrs)<br>• <strong>David Chen</strong> - Bodybuilding & Muscle Gain (15 yrs)<br>• <strong>Anjali Thapa</strong> - Zumba & Women's Fitness (5 yrs)<br><br>All trainers are internationally certified!`;
+            }
+
+            if (text.includes('program') || text.includes('weight loss') || text.includes('muscle') || text.includes('transformation') || text.includes('fitness goal')) {
+                return `We offer 8 specialized programs:<br><br>1. Weight Loss Program<br>2. Muscle Building Program<br>3. Strength Training<br>4. Cardio Training<br>5. CrossFit<br>6. Body Transformation<br>7. Women's Fitness<br>8. Senior Fitness<br><br>Each program includes customized workouts, nutrition plans, and progress tracking. Which program interests you?`;
+            }
+
+            if (text.includes('nutrition') || text.includes('diet') || text.includes('meal') || text.includes('food') || text.includes('eat')) {
+                return `Our nutrition services include:<br><br>• Customized meal plans based on your goals<br>• Macro and calorie calculations<br>• Supplement recommendations<br>• Weekly diet check-ins<br>• Nutrition bar with healthy meals and shakes<br><br>Nutrition counseling is included in Annual, PT, and VIP memberships. Individual consultations are Rs. 2,000/session.`;
+            }
+
+            if (text.includes('trial') || text.includes('free') || text.includes('demo') || text.includes('visit')) {
+                return `Yes! We offer a FREE trial session that includes:<br><br>• Full gym tour<br>• Body composition analysis<br>• Fitness assessment<br>• 45-minute workout with a trainer<br>• Q&A with our team<br><br>Book your trial by filling the form on our website or messaging us on WhatsApp at +977 9768832052.`;
+            }
+
+            if (text.includes('facility') || text.includes('equipment') || text.includes('machine') || text.includes('shower') || text.includes('locker') || text.includes('parking')) {
+                return `Our facilities include:<br><br>• Cardio Zone (Technogym, Life Fitness)<br>• Weight Training Area (Hammer Strength, Rogue)<br>• Functional Training Area<br>• Group Class Studio<br>• Locker Rooms with Digital Locks<br>• Showers, Steam Room & Sauna<br>• Nutrition Bar<br>• Free Parking (50+ spaces)<br>• High-Speed Wi-Fi<br><br>Everything is maintained to international standards!`;
+            }
+
+            if (text.includes('location') || text.includes('address') || text.includes('where') || text.includes('kathmandu') || text.includes('thamel')) {
+                return `We are located at:<br><br><strong>Thamel, Kathmandu, Nepal</strong><br>Near Garden of Dreams<br><br>We're easily accessible from all major areas of Kathmandu. You can find us on Google Maps or call us at +977 9768832052 for directions.`;
+            }
+
+            if (text.includes('contact') || text.includes('phone') || text.includes('email') || text.includes('call') || text.includes('whatsapp')) {
+                return `You can reach us at:<br><br>• <strong>Phone:</strong> +977 9768832052<br>• <strong>Email:</strong> info@titanfitness.com.np<br>• <strong>WhatsApp:</strong> +977 9768832052<br>• <strong>Address:</strong> Thamel, Kathmandu<br><br>We're available from 5:00 AM to 10:00 PM daily.`;
+            }
+
+            if (text.includes('hi') || text.includes('hello') || text.includes('hey') || text.includes('namaste')) {
+                return `Hello! Welcome to Titan Fitness Gym! 🏋️‍♂️<br><br>I'm your AI assistant and I can help you with:<br>• Membership prices and plans<br>• Gym timings and class schedules<br>• Trainer information<br>• Fitness programs<br>• Nutrition guidance<br>• Free trial bookings<br>• Facilities and equipment<br><br>What would you like to know?`;
+            }
+
+            return `Thank you for your question! I'd be happy to help you with that. For more detailed information, please:<br><br>• Call us at <strong>+977 9768832052</strong><br>• Message us on WhatsApp<br>• Visit us at Thamel, Kathmandu<br>• Or ask me another question about memberships, classes, trainers, or facilities!`;
+        }
+
+        function sendMessage() {
+            const text = chatInput.value.trim();
+            if (!text) return;
+
+            addMessage(text, true);
+            chatInput.value = '';
+
+            showTyping();
+
+            setTimeout(() => {
+                hideTyping();
+                const response = getBotResponse(text);
+                addMessage(response);
+            }, 1500);
+        }
+
+        function sendQuickReply(text) {
+            addMessage(text, true);
+            showTyping();
+
+            setTimeout(() => {
+                hideTyping();
+                const response = getBotResponse(text);
+                addMessage(response);
+            }, 1000);
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Set minimum date for trial form
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('trialDate').setAttribute('min', today);
+    </script>
+</body>
+</html>
